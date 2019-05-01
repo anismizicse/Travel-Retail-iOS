@@ -1,0 +1,6 @@
+framework module Pods_Travel_RetailTests {
+  umbrella header "Pods-Travel RetailTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
