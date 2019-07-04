@@ -14,4 +14,6 @@ class LiveChatUtil{
     static let PRIVATE_CHAT = "PrivateChat";
     static let CHAT_NAME = "ChatName";
     static let PHOTO_URL = "PhotoUrl";
+    
+    static var usersThumbnail = [String:String]()
 }

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomImageMessage" customModule="Travel_Retail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kfc-l8-jrZ">
+                    <rect key="frame" x="8" y="28" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Y5q-fl-hjZ"/>
+                        <constraint firstAttribute="width" constant="50" id="bOP-r7-bIs"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receiver Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hl2-DA-aHB">
+                    <rect key="frame" x="66" y="28" width="150" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="cOe-hM-rdP"/>
+                        <constraint firstAttribute="width" constant="150" id="fLq-Z4-0ag"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t9y-28-6ah">
+                    <rect key="frame" x="66" y="57" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="1IH-Rj-vOh"/>
+                        <constraint firstAttribute="height" constant="150" id="M1q-sB-0nt"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receiver Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Md-Z9-f30">
+                    <rect key="frame" x="73" y="215" width="107" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ftt-DU-DtE">
+                    <rect key="frame" x="256" y="28" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="TVd-i1-S5x"/>
+                        <constraint firstAttribute="width" constant="150" id="dp0-4N-qgc"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sender Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plL-vq-saF">
+                    <rect key="frame" x="256" y="186" width="96" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hl2-DA-aHB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="BSE-HU-l7c"/>
+                <constraint firstItem="ftt-DU-DtE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="CgF-mJ-5oG"/>
+                <constraint firstItem="Kfc-l8-jrZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="FuY-JK-5Mp"/>
+                <constraint firstItem="t9y-28-6ah" firstAttribute="top" secondItem="hl2-DA-aHB" secondAttribute="bottom" constant="8" id="XiI-oI-l5D"/>
+                <constraint firstItem="t9y-28-6ah" firstAttribute="leading" secondItem="Kfc-l8-jrZ" secondAttribute="trailing" constant="8" id="gSL-Gl-DOR"/>
+                <constraint firstItem="Kfc-l8-jrZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="nSX-0h-dAy"/>
+                <constraint firstItem="hl2-DA-aHB" firstAttribute="leading" secondItem="Kfc-l8-jrZ" secondAttribute="trailing" constant="8" id="oxb-st-I6p"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ftt-DU-DtE" secondAttribute="trailing" constant="8" id="x7i-rg-cwn"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="profileImage" destination="Kfc-l8-jrZ" id="mNX-ka-eJY"/>
+                <outlet property="receiverData" destination="7Md-Z9-f30" id="ChT-I3-aG1"/>
+                <outlet property="receiverImageMsg" destination="t9y-28-6ah" id="N4h-dA-C8U"/>
+                <outlet property="receiverName" destination="hl2-DA-aHB" id="tnG-ib-aVe"/>
+                <outlet property="senderDate" destination="plL-vq-saF" id="I2u-gY-0cJ"/>
+                <outlet property="senderImageMsg" destination="ftt-DU-DtE" id="H2o-cw-L5o"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="129.61956521739131"/>
+        </view>
+    </objects>
+</document>

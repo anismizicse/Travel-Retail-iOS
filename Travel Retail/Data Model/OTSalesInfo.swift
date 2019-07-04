@@ -24,5 +24,4 @@ class OTSalesInfo: Object {
     @objc dynamic var unit_price: String = ""
     @objc dynamic var total_price: String = ""
     @objc dynamic var date: String = ""
-    @objc dynamic var location_area: String = ""
 }

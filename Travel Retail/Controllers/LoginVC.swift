@@ -99,14 +99,17 @@ class LoginVC: UIViewController {
         
         
         if (userInfo.count != 0) {
+            
             if (userInfo[0].usercode != usercode || userInfo[0].pass != password) {
                 
                 AlertController.showAlert(self, title: "Invalid", message: "Invalid Username or Password.")
                 
                 return
-            }else if (userInfo[0].usercode == usercode || userInfo[0].pass == password){
+            }else if (userInfo[0].usercode == usercode && userInfo[0].pass == password){
                 
                 Utils.location = userInfo[0].location
+                Utils.loginName = userInfo[0].usercode
+                Utils.salesmanName = "\(userInfo[0].fname) \(userInfo[0].lname)"
                 
                 //This method resets all data loader variables
                 //DataLoader.resetAllData();
@@ -159,6 +162,8 @@ class LoginVC: UIViewController {
     
     func setUpLocalDB(){
         
+        self.view.makeToastActivity(.center)
+        
         //creating parameters for the post request
         let parameters: Parameters=[
             "usercode": userCode,
@@ -170,7 +175,7 @@ class LoginVC: UIViewController {
             {
                 response in
                 //printing response
-                //print(response)
+                print("\(response) \(self.userCode) \(self.userPass)")
                 
                 //getting the json value from the server
                 if let result = response.result.value {
@@ -213,16 +218,19 @@ class LoginVC: UIViewController {
                                 UserDefaults.standard.set(userinfo.location, forKey: Utils.CHAT_GROUP)
                                 
                                 if userinfo.logged_in == "1"{
+                                    
+                                    self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                    
                                     AlertController.showAlert(self, title: "Logged In", message: "Please contact admin to logout your account.")
                                 }else{
                                     
                                     /*All checks are satisfied. Actual local db creation starts from here.
                                      We are setting this static variables for later use.
                                      */
-                                    self.userLocation = userinfo.location;
-                                    Utils.loginName = userinfo.usercode;
-                                    Utils.location = userinfo.location;
-                                    Utils.salesmanName = "\(userinfo.fname) \(userinfo.lname)";
+                                    self.userLocation = userinfo.location
+                                    Utils.loginName = userinfo.usercode
+                                    Utils.location = userinfo.location
+                                    Utils.salesmanName = "\(userinfo.fname) \(userinfo.lname)"
                                     
                                     UserDefaults.standard.set(Utils.salesmanName, forKey: LiveChatUtil.CHAT_NAME)
                                     UserDefaults.standard.set("na", forKey: LiveChatUtil.PHOTO_URL)
@@ -254,20 +262,30 @@ class LoginVC: UIViewController {
                                     
                                     
                                 }
+   
+                            }else{
                                 
-                                
-                                
+                                AlertController.showAlert(self, title: "Invalid", message: "Invalid Username or Password.")
+                                self.view.hideAllToasts(includeActivity: true, clearQueue: true)
                                 
                             }
                         }
-                    }else if let jsonData = result as? String{
-                        
-                        if jsonData == "na"{
-                            
-                            AlertController.showAlert(self, title: "Invalid", message: "Invalid Username or Password.")
-                            
-                        }
                     }
+                    
+                    /*else if let jsonData = result as? String{
+                     
+                     if jsonData == "na"{
+                     
+                     AlertController.showAlert(self, title: "Invalid", message: "Invalid Username or Password.")
+                     self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                     
+                     }
+                     }*/
+                }else{
+                    
+                    AlertController.showAlert(self, title: "Invalid", message: "Invalid Username or Password.")
+                    self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                    
                 }
         }
     }
@@ -295,15 +313,15 @@ class LoginVC: UIViewController {
                         let totalProducts = jsonData.count
                         var i = 1
                         
-                        let alertController = UIAlertController(title: "Inserting Products.", message: "\(i)/\(totalProducts) inserted", preferredStyle: .alert)
+                        /*let alertController = UIAlertController(title: "Inserting Products.", message: "\(i)/\(totalProducts) inserted", preferredStyle: .alert)
                         
-                        /*let progressDownload : UIProgressView = UIProgressView(progressViewStyle: .default)
+                        let progressDownload : UIProgressView = UIProgressView(progressViewStyle: .default)
                          
                          progressDownload.setProgress(Float(i)/Float(totalProducts), animated: true)
                          progressDownload.frame = CGRect(x: 10, y: 70, width: 250, height: 0)
                          
-                         alertController.view.addSubview(progressDownload)*/
-                        self.present(alertController, animated: true, completion: nil)
+                         alertController.view.addSubview(progressDownload)
+                        self.present(alertController, animated: true, completion: nil)*/
                         
                         
                         for entry in jsonData {
@@ -329,7 +347,7 @@ class LoginVC: UIViewController {
                                     }
                                     
                                     //progressDownload.setProgress(Float(i)/Float(totalProducts), animated: true)
-                                    alertController.message = "\(i)/\(totalProducts) inserted"
+                                    //alertController.message = "\(i)/\(totalProducts) inserted"
                                     i += 1
                                     
                                 }catch{
@@ -340,7 +358,7 @@ class LoginVC: UIViewController {
                         }
                         
                         if (i - 1) == totalProducts {
-                            alertController.dismiss(animated: true, completion: nil)
+                            //alertController.dismiss(animated: true, completion: nil)
                             self.insertSales()
                         }
                     }
@@ -363,7 +381,7 @@ class LoginVC: UIViewController {
                 //print(response)
                 
                 self.view.makeToast("Inserting Sales Data. Pelase wait....")
-                self.view.makeToastActivity(.center)
+                //self.view.makeToastActivity(.center)
                 
                 var totalData = 0
                 var i = 0
@@ -373,7 +391,7 @@ class LoginVC: UIViewController {
                     
                     //getting the json value from the server
                     if let result = response.result.value {
-                    
+                        
                         
                         //converting it as NSDictionary
                         if let jsonData = result as? NSArray{
@@ -381,6 +399,8 @@ class LoginVC: UIViewController {
                             totalData = jsonData.count
                             i = 1
                             let realm = try! Realm()
+                            
+                            var sale_id = 0;
                             
                             /*let alertController = UIAlertController(title: "Inserting Sales Data.", message: "\(i)/\(totalData) inserted", preferredStyle: .alert)
                              
@@ -415,6 +435,8 @@ class LoginVC: UIViewController {
                                     saleInfo.date = entry.value(forKey: "date") as? String ?? ""
                                     
                                     
+                                    sale_id = saleInfo.sale_id;
+                                    
                                     do{
                                         try realm.write {
                                             realm.add(saleInfo)
@@ -431,20 +453,22 @@ class LoginVC: UIViewController {
                                 }
                             }
                             
-                            print("\(i) \(totalData)")
+                            //print("\(i) \(totalData)")
                             if (i - 1) == totalData {
                                 
                                 DispatchQueue.main.async {
-                                    self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                    
+                                    //self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                    UserDefaults.standard.set((sale_id + 1), forKey: Utils.TRANSACTION_ID)
                                     self.insertOTSales();
                                 }
                                 
                             }
                         }
                     }else{
-                       
+                        
                         DispatchQueue.main.async {
-                            self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                            //self.view.hideAllToasts(includeActivity: true, clearQueue: true)
                             self.insertOTSales();
                         }
                         
@@ -470,7 +494,7 @@ class LoginVC: UIViewController {
                 //print(response)
                 
                 self.view.makeToast("Inserting OT Sales Data. Pelase wait....")
-                self.view.makeToastActivity(.center)
+                //self.view.makeToastActivity(.center)
                 
                 var totalData = 0
                 var i = 0
@@ -490,6 +514,7 @@ class LoginVC: UIViewController {
                             
                             totalData = jsonData.count
                             i = 1
+                            var ot_sale_id = 0;
                             let realm = try! Realm()
                             
                             for entry in jsonData {
@@ -513,6 +538,7 @@ class LoginVC: UIViewController {
                                     saleInfo.total_price = entry.value(forKey: "total_price") as? String ?? ""
                                     saleInfo.date = entry.value(forKey: "date") as? String ?? ""
                                     
+                                    ot_sale_id = saleInfo.sale_id
                                     
                                     do{
                                         try realm.write {
@@ -532,7 +558,8 @@ class LoginVC: UIViewController {
                             if (i - 1) == totalData {
                                 //alertController.dismiss(animated: true, completion: nil)
                                 DispatchQueue.main.async {
-                                    self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                    //self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                    UserDefaults.standard.set(ot_sale_id + 1, forKey: Utils.OTTRANSACTION_ID)
                                     self.insertLocations()
                                 }
                                 
@@ -544,7 +571,7 @@ class LoginVC: UIViewController {
                             self.view.hideToastActivity()
                             self.insertLocations()
                         }
-                    
+                        
                     }
                 }
                 
@@ -567,7 +594,7 @@ class LoginVC: UIViewController {
                 //print(response)
                 
                 self.view.makeToast("Inserting Locations Data. Pelase wait....")
-                self.view.makeToastActivity(.center)
+                //self.view.makeToastActivity(.center)
                 
                 var totalData = 0
                 var i = 0
@@ -617,7 +644,7 @@ class LoginVC: UIViewController {
                             if (i - 1) == totalData {
                                 //alertController.dismiss(animated: true, completion: nil)
                                 DispatchQueue.main.async {
-                                    self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                    //self.view.hideAllToasts(includeActivity: true, clearQueue: true)
                                     self.insertCircular()
                                 }
                                 
@@ -641,7 +668,7 @@ class LoginVC: UIViewController {
                 //print(response)
                 
                 self.view.makeToast("Inserting Circular Data. Pelase wait....")
-                self.view.makeToastActivity(.center)
+                //self.view.makeToastActivity(.center)
                 
                 var totalData = 0
                 var i = 0
@@ -693,7 +720,7 @@ class LoginVC: UIViewController {
                             if (i - 1) == totalData {
                                 //alertController.dismiss(animated: true, completion: nil)
                                 DispatchQueue.main.async {
-                                    self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                    //self.view.hideAllToasts(includeActivity: true, clearQueue: true)
                                     self.insertGuideline()
                                 }
                                 
@@ -724,7 +751,7 @@ class LoginVC: UIViewController {
                 //print(response)
                 
                 self.view.makeToast("Inserting Guideline Data. Pelase wait....")
-                self.view.makeToastActivity(.center)
+                //self.view.makeToastActivity(.center)
                 
                 var totalData = 0
                 var i = 0
@@ -776,7 +803,7 @@ class LoginVC: UIViewController {
                             if (i - 1) == totalData {
                                 //alertController.dismiss(animated: true, completion: nil)
                                 DispatchQueue.main.async {
-                                    self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                    //self.view.hideAllToasts(includeActivity: true, clearQueue: true)
                                     self.insertAppSettings()
                                 }
                                 
@@ -807,7 +834,7 @@ class LoginVC: UIViewController {
                 //print(response)
                 
                 
-                self.view.makeToastActivity(.center)
+                //self.view.makeToastActivity(.center)
                 
                 
                 DispatchQueue(label: "Guidelines", qos: .background).async {
@@ -835,7 +862,7 @@ class LoginVC: UIViewController {
                             
                             
                             DispatchQueue.main.async {
-                                self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                //self.view.hideAllToasts(includeActivity: true, clearQueue: true)
                                 self.insertAppUpdate()
                             }
                             
@@ -859,7 +886,7 @@ class LoginVC: UIViewController {
                 //print(response)
                 
                 
-                self.view.makeToastActivity(.center)
+                //self.view.makeToastActivity(.center)
                 
                 
                 DispatchQueue(label: "App Updates", qos: .background).async {
@@ -906,7 +933,7 @@ class LoginVC: UIViewController {
                             
                             DispatchQueue.main.async {
                                 
-                                self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                                //self.view.hideAllToasts(includeActivity: true, clearQueue: true)
                                 self.updateLogged()
                             }
                             
@@ -945,6 +972,7 @@ class LoginVC: UIViewController {
             
             if let err = error {
                 AlertController.showAlert(self, title: "Error!", message: err.localizedDescription)
+                self.view.hideAllToasts(includeActivity: true, clearQueue: true)
                 return
             }
             
@@ -963,6 +991,7 @@ class LoginVC: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
             
             if let user = authResult?.user{
+                self.view.hideAllToasts(includeActivity: true, clearQueue: true)
                 Utils.saveToken(ref: self.ref, currentUserId: user.uid)
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
@@ -992,14 +1021,14 @@ class LoginVC: UIViewController {
     func createChatUserInfo(currentUserId: String){
         
         let userInfo = ["name": "\(fname) \(lname)",
-                    "status": "\(userLocation) user",
-                    "uid": currentUserId,
-                    "usercode": userCode,
-                    "email": email,
-                    "phone": phone,
-                    "password": userPass,
-                    "user_type": user_type,
-                    "location": userLocation]
+            "status": "\(userLocation) user",
+            "uid": currentUserId,
+            "usercode": userCode,
+            "email": email,
+            "phone": phone,
+            "password": userPass,
+            "user_type": user_type,
+            "location": userLocation]
         
         let childUpdates = ["/Users/\(currentUserId)": userInfo]
         
@@ -1012,6 +1041,9 @@ class LoginVC: UIViewController {
                 
                 ref.child("GroupMembers").child(self.userLocation).child(currentUserId).child("saved").setValue(true){
                     (error:Error?, ref:DatabaseReference) in
+                    
+                    self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+                    
                     if let error = error {
                         print("Data could not be saved: \(error).")
                     } else {
@@ -1022,8 +1054,8 @@ class LoginVC: UIViewController {
             }
         }
         
-
+        
     }
     
-
+    
 }

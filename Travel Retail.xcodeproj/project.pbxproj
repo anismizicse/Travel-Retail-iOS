@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		31AF9F423E0B9380A49A957A /* Pods_Travel_RetailUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD2331C374C8EF56C61B295 /* Pods_Travel_RetailUITests.framework */; };
+		5E0BB9EE22C221F300074A98 /* GroupChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0BB9ED22C221F300074A98 /* GroupChatVC.swift */; };
+		5E0CE05022C32551007CC004 /* CustomMessages.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0CE04F22C32551007CC004 /* CustomMessages.xib */; };
+		5E0CE05422C33169007CC004 /* CustomeImageMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0CE05322C33169007CC004 /* CustomeImageMessage.xib */; };
+		5E0CE05622C33545007CC004 /* CustomMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CE05522C33545007CC004 /* CustomMessages.swift */; };
+		5E0EBF1B22A2791C007CE474 /* MembersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0EBF1A22A2791C007CE474 /* MembersListCell.swift */; };
+		5E0EBF1D22A2797E007CE474 /* UnseenMsgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0EBF1C22A2797E007CE474 /* UnseenMsgCell.swift */; };
+		5E0EBF1F22A2F026007CE474 /* MemberCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0EBF1E22A2F026007CE474 /* MemberCellData.swift */; };
+		5E1BC137228D74A200E02EEA /* EditSalesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BC136228D74A200E02EEA /* EditSalesDetailsVC.swift */; };
+		5E1BC13B228DE02500E02EEA /* DeletedSalesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BC13A228DE02500E02EEA /* DeletedSalesInfo.swift */; };
+		5E1BC13D228DE36000E02EEA /* EditedSalesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BC13C228DE36000E02EEA /* EditedSalesInfo.swift */; };
+		5E1BC13F228DF77700E02EEA /* OTDeletedSalesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BC13E228DF77700E02EEA /* OTDeletedSalesInfo.swift */; };
+		5E1BC141228DF7CA00E02EEA /* OTEditedSalesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BC140228DF7CA00E02EEA /* OTEditedSalesInfo.swift */; };
+		5E308A8C229089B6007F907F /* PriceListDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E308A8B229089B6007F907F /* PriceListDetailsVC.swift */; };
 		5E30E9902248AAF30069FEBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E30E98F2248AAF30069FEBF /* AppDelegate.swift */; };
 		5E30E9952248AAF30069FEBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E30E9932248AAF30069FEBF /* Main.storyboard */; };
 		5E30E9982248AAF30069FEBF /* Travel_Retail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E30E9962248AAF30069FEBF /* Travel_Retail.xcdatamodeld */; };
@@ -19,9 +32,24 @@
 		5E3C6E4622788FB600DE28E8 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C6E4522788FB600DE28E8 /* LocationInfo.swift */; };
 		5E3C6E482278918200DE28E8 /* CircularInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C6E472278918200DE28E8 /* CircularInfo.swift */; };
 		5E3C6E4A227893D600DE28E8 /* GuidelineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C6E49227893D600DE28E8 /* GuidelineInfo.swift */; };
+		5E44377C2280080900566EB0 /* DailySalesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44377B2280080900566EB0 /* DailySalesVC.swift */; };
+		5E44377E228012EE00566EB0 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44377D228012EE00566EB0 /* AddItemVC.swift */; };
+		5E4437812280160C00566EB0 /* AddItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4437802280160C00566EB0 /* AddItemDelegate.swift */; };
+		5E44378322803E7600566EB0 /* CustomAlert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E44378222803E7600566EB0 /* CustomAlert.storyboard */; };
+		5E44378522803EC100566EB0 /* AddItemAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44378422803EC100566EB0 /* AddItemAlertVC.swift */; };
+		5E44378722804A1100566EB0 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E44378622804A1100566EB0 /* AlertService.swift */; };
 		5E4F7B6C227342BF005A5D97 /* LocalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4F7B6B227342BF005A5D97 /* LocalDB.swift */; };
+		5E573F5E227B01B800AD9AC3 /* SetLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E573F5D227B01B800AD9AC3 /* SetLocationVC.swift */; };
+		5E591F22228AA199005D8849 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E591F21228AA199005D8849 /* MainNavigationController.swift */; };
+		5E591F24228AB0CF005D8849 /* SalesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E591F23228AB0CF005D8849 /* SalesDetailsVC.swift */; };
+		5E591F26228AE90C005D8849 /* SaleDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E591F25228AE90C005D8849 /* SaleDetailsCell.swift */; };
+		5E8332412299228E008304D3 /* LiveChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8332402299228E008304D3 /* LiveChatVC.swift */; };
+		5E83324322992C0D008304D3 /* MembersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83324222992C0D008304D3 /* MembersVC.swift */; };
+		5E83324522992C28008304D3 /* UnseenMessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E83324422992C28008304D3 /* UnseenMessagesVC.swift */; };
+		5E87069722C7205500EB06CB /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87069622C7205500EB06CB /* Messages.swift */; };
 		5E921B6D2278164C0016D342 /* LiveChatUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E921B6C2278164C0016D342 /* LiveChatUtil.swift */; };
 		5E921B6F22785A3A0016D342 /* SalesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E921B6E22785A3A0016D342 /* SalesInfo.swift */; };
+		5E9A68E122955CC300190CF3 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A68E022955CC300190CF3 /* TestVC.swift */; };
 		5E9BC4DB224C8593009B71D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9BC4DA224C8593009B71D1 /* GoogleService-Info.plist */; };
 		5E9BC4DF224CA374009B71D1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9BC4DE224CA374009B71D1 /* LoginVC.swift */; };
 		5E9BC4E1224CA39B009B71D1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9BC4E0224CA39B009B71D1 /* HomeVC.swift */; };
@@ -29,8 +57,19 @@
 		5E9BC4E5224CC1FC009B71D1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9BC4E4224CC1FC009B71D1 /* Utils.swift */; };
 		5E9BC4E7224D0B59009B71D1 /* PriceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9BC4E6224D0B59009B71D1 /* PriceListVC.swift */; };
 		5E9BC4E9224D0C02009B71D1 /* PriceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9BC4E8224D0C02009B71D1 /* PriceListCell.swift */; };
+		5EB46DC922C8561C00F87584 /* CustomImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB46DC822C8561C00F87584 /* CustomImageMessage.swift */; };
+		5EB46DCC22C8759300F87584 /* CustomMessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB46DCA22C8759300F87584 /* CustomMessagesCell.swift */; };
+		5EB46DCD22C8759300F87584 /* CustomMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB46DCB22C8759300F87584 /* CustomMessagesCell.xib */; };
+		5EC31BCE229169A5002898A1 /* OTOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC31BCD229169A5002898A1 /* OTOptionsVC.swift */; };
+		5EC7C55D2281D18300919E3F /* TempSalesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7C55C2281D18300919E3F /* TempSalesInfo.swift */; };
+		5EC7C55F2281FF3900919E3F /* OTTempSalesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7C55E2281FF3900919E3F /* OTTempSalesInfo.swift */; };
 		5ECB59C6225A19E80057A13E /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB59C5225A19E80057A13E /* UserInfo.swift */; };
 		5ECB59C8225A1A210057A13E /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB59C7225A1A210057A13E /* ProductInfo.swift */; };
+		5ECB95B62288A96B00380A95 /* CircularVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB95B52288A96B00380A95 /* CircularVC.swift */; };
+		5ECB95B82288AA2400380A95 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB95B72288AA2400380A95 /* Slide.swift */; };
+		5ECB95BA2288AADB00380A95 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECB95B92288AADB00380A95 /* Slide.xib */; };
+		5ED1493522B75B6200424BCE /* LiveChatSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1493422B75B6200424BCE /* LiveChatSettings.swift */; };
+		5EF807B7229A7FC800BFC2F8 /* MenuTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF807B6229A7FC800BFC2F8 /* MenuTabsView.swift */; };
 		D432C2B7400DB61A7663C1E8 /* Pods_Travel_Retail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A02667725684C51FB18BA3 /* Pods_Travel_Retail.framework */; };
 		FAA1EE5DB9E913A949DE6115 /* Pods_Travel_RetailTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF5E133B16C0AF4A1A9C2D0 /* Pods_Travel_RetailTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +95,19 @@
 		16DB023B8512DD326C2E7282 /* Pods-Travel RetailTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel RetailTests.release.xcconfig"; path = "Target Support Files/Pods-Travel RetailTests/Pods-Travel RetailTests.release.xcconfig"; sourceTree = "<group>"; };
 		23A02667725684C51FB18BA3 /* Pods_Travel_Retail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel_Retail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A0B4B5E5C57027CD555011 /* Pods-Travel RetailUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel RetailUITests.debug.xcconfig"; path = "Target Support Files/Pods-Travel RetailUITests/Pods-Travel RetailUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E0BB9ED22C221F300074A98 /* GroupChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatVC.swift; sourceTree = "<group>"; };
+		5E0CE04F22C32551007CC004 /* CustomMessages.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMessages.xib; sourceTree = "<group>"; };
+		5E0CE05322C33169007CC004 /* CustomeImageMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomeImageMessage.xib; sourceTree = "<group>"; };
+		5E0CE05522C33545007CC004 /* CustomMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessages.swift; sourceTree = "<group>"; };
+		5E0EBF1A22A2791C007CE474 /* MembersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersListCell.swift; sourceTree = "<group>"; };
+		5E0EBF1C22A2797E007CE474 /* UnseenMsgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnseenMsgCell.swift; sourceTree = "<group>"; };
+		5E0EBF1E22A2F026007CE474 /* MemberCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCellData.swift; sourceTree = "<group>"; };
+		5E1BC136228D74A200E02EEA /* EditSalesDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSalesDetailsVC.swift; sourceTree = "<group>"; };
+		5E1BC13A228DE02500E02EEA /* DeletedSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedSalesInfo.swift; sourceTree = "<group>"; };
+		5E1BC13C228DE36000E02EEA /* EditedSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditedSalesInfo.swift; sourceTree = "<group>"; };
+		5E1BC13E228DF77700E02EEA /* OTDeletedSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTDeletedSalesInfo.swift; sourceTree = "<group>"; };
+		5E1BC140228DF7CA00E02EEA /* OTEditedSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTEditedSalesInfo.swift; sourceTree = "<group>"; };
+		5E308A8B229089B6007F907F /* PriceListDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListDetailsVC.swift; sourceTree = "<group>"; };
 		5E30E98C2248AAF30069FEBF /* Travel Retail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Retail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E30E98F2248AAF30069FEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E30E9942248AAF30069FEBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,9 +125,24 @@
 		5E3C6E4522788FB600DE28E8 /* LocationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
 		5E3C6E472278918200DE28E8 /* CircularInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularInfo.swift; sourceTree = "<group>"; };
 		5E3C6E49227893D600DE28E8 /* GuidelineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelineInfo.swift; sourceTree = "<group>"; };
+		5E44377B2280080900566EB0 /* DailySalesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySalesVC.swift; sourceTree = "<group>"; };
+		5E44377D228012EE00566EB0 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
+		5E4437802280160C00566EB0 /* AddItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemDelegate.swift; sourceTree = "<group>"; };
+		5E44378222803E7600566EB0 /* CustomAlert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomAlert.storyboard; sourceTree = "<group>"; };
+		5E44378422803EC100566EB0 /* AddItemAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemAlertVC.swift; sourceTree = "<group>"; };
+		5E44378622804A1100566EB0 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		5E4F7B6B227342BF005A5D97 /* LocalDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDB.swift; sourceTree = "<group>"; };
+		5E573F5D227B01B800AD9AC3 /* SetLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLocationVC.swift; sourceTree = "<group>"; };
+		5E591F21228AA199005D8849 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		5E591F23228AB0CF005D8849 /* SalesDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesDetailsVC.swift; sourceTree = "<group>"; };
+		5E591F25228AE90C005D8849 /* SaleDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleDetailsCell.swift; sourceTree = "<group>"; };
+		5E8332402299228E008304D3 /* LiveChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChatVC.swift; sourceTree = "<group>"; };
+		5E83324222992C0D008304D3 /* MembersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersVC.swift; sourceTree = "<group>"; };
+		5E83324422992C28008304D3 /* UnseenMessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnseenMessagesVC.swift; sourceTree = "<group>"; };
+		5E87069622C7205500EB06CB /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		5E921B6C2278164C0016D342 /* LiveChatUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChatUtil.swift; sourceTree = "<group>"; };
 		5E921B6E22785A3A0016D342 /* SalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesInfo.swift; sourceTree = "<group>"; };
+		5E9A68E022955CC300190CF3 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		5E9BC4DA224C8593009B71D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E9BC4DE224CA374009B71D1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		5E9BC4E0224CA39B009B71D1 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -83,8 +150,19 @@
 		5E9BC4E4224CC1FC009B71D1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		5E9BC4E6224D0B59009B71D1 /* PriceListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListVC.swift; sourceTree = "<group>"; };
 		5E9BC4E8224D0C02009B71D1 /* PriceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListCell.swift; sourceTree = "<group>"; };
+		5EB46DC822C8561C00F87584 /* CustomImageMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageMessage.swift; sourceTree = "<group>"; };
+		5EB46DCA22C8759300F87584 /* CustomMessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessagesCell.swift; sourceTree = "<group>"; };
+		5EB46DCB22C8759300F87584 /* CustomMessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMessagesCell.xib; sourceTree = "<group>"; };
+		5EC31BCD229169A5002898A1 /* OTOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTOptionsVC.swift; sourceTree = "<group>"; };
+		5EC7C55C2281D18300919E3F /* TempSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempSalesInfo.swift; sourceTree = "<group>"; };
+		5EC7C55E2281FF3900919E3F /* OTTempSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTTempSalesInfo.swift; sourceTree = "<group>"; };
 		5ECB59C5225A19E80057A13E /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		5ECB59C7225A1A210057A13E /* ProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
+		5ECB95B52288A96B00380A95 /* CircularVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularVC.swift; sourceTree = "<group>"; };
+		5ECB95B72288AA2400380A95 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		5ECB95B92288AADB00380A95 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		5ED1493422B75B6200424BCE /* LiveChatSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChatSettings.swift; sourceTree = "<group>"; };
+		5EF807B6229A7FC800BFC2F8 /* MenuTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabsView.swift; sourceTree = "<group>"; };
 		8FD2331C374C8EF56C61B295 /* Pods_Travel_RetailUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel_RetailUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A2BEF564CB09F35C0FC812 /* Pods-Travel RetailUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel RetailUITests.release.xcconfig"; path = "Target Support Files/Pods-Travel RetailUITests/Pods-Travel RetailUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ACF5E133B16C0AF4A1A9C2D0 /* Pods_Travel_RetailTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel_RetailTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				5E30E98E2248AAF30069FEBF /* Travel Retail */,
+				5E44377F2280150900566EB0 /* Utils */,
 				5E30E9A62248AAF50069FEBF /* Travel RetailTests */,
 				5E30E9B12248AAF50069FEBF /* Travel RetailUITests */,
 				5E30E98D2248AAF30069FEBF /* Products */,
@@ -159,6 +238,7 @@
 		5E30E98E2248AAF30069FEBF /* Travel Retail */ = {
 			isa = PBXGroup;
 			children = (
+				5EB46DC722C8551E00F87584 /* CustomViews */,
 				5E30E98F2248AAF30069FEBF /* AppDelegate.swift */,
 				5E30E9932248AAF30069FEBF /* Main.storyboard */,
 				5E30E9992248AAF50069FEBF /* Assets.xcassets */,
@@ -167,10 +247,8 @@
 				5E9BC4DA224C8593009B71D1 /* GoogleService-Info.plist */,
 				5E30E9962248AAF30069FEBF /* Travel_Retail.xcdatamodeld */,
 				5ECB59C9225A1D560057A13E /* Controllers */,
-				5E9BC4E2224CB244009B71D1 /* AlertController.swift */,
 				5ECB59C4225A19C80057A13E /* Data Model */,
-				5E9BC4E6224D0B59009B71D1 /* PriceListVC.swift */,
-				5E9BC4E8224D0C02009B71D1 /* PriceListCell.swift */,
+				5E44378222803E7600566EB0 /* CustomAlert.storyboard */,
 			);
 			path = "Travel Retail";
 			sourceTree = "<group>";
@@ -193,10 +271,35 @@
 			path = "Travel RetailUITests";
 			sourceTree = "<group>";
 		};
-		5ECB59C4225A19C80057A13E /* Data Model */ = {
+		5E44377F2280150900566EB0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				5E9BC4E4224CC1FC009B71D1 /* Utils.swift */,
+				5E4437802280160C00566EB0 /* AddItemDelegate.swift */,
+				5E44378622804A1100566EB0 /* AlertService.swift */,
+				5EF807B6229A7FC800BFC2F8 /* MenuTabsView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5EB46DC722C8551E00F87584 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5ECB95B72288AA2400380A95 /* Slide.swift */,
+				5E0CE05522C33545007CC004 /* CustomMessages.swift */,
+				5ECB95B92288AADB00380A95 /* Slide.xib */,
+				5E0CE04F22C32551007CC004 /* CustomMessages.xib */,
+				5E0CE05322C33169007CC004 /* CustomeImageMessage.xib */,
+				5EB46DC822C8561C00F87584 /* CustomImageMessage.swift */,
+				5EB46DCA22C8759300F87584 /* CustomMessagesCell.swift */,
+				5EB46DCB22C8759300F87584 /* CustomMessagesCell.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		5ECB59C4225A19C80057A13E /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
 				5ECB59C5225A19E80057A13E /* UserInfo.swift */,
 				5ECB59C7225A1A210057A13E /* ProductInfo.swift */,
 				5E4F7B6B227342BF005A5D97 /* LocalDB.swift */,
@@ -206,6 +309,14 @@
 				5E3C6E4522788FB600DE28E8 /* LocationInfo.swift */,
 				5E3C6E472278918200DE28E8 /* CircularInfo.swift */,
 				5E3C6E49227893D600DE28E8 /* GuidelineInfo.swift */,
+				5EC7C55C2281D18300919E3F /* TempSalesInfo.swift */,
+				5EC7C55E2281FF3900919E3F /* OTTempSalesInfo.swift */,
+				5E1BC13A228DE02500E02EEA /* DeletedSalesInfo.swift */,
+				5E1BC13C228DE36000E02EEA /* EditedSalesInfo.swift */,
+				5E1BC13E228DF77700E02EEA /* OTDeletedSalesInfo.swift */,
+				5E1BC140228DF7CA00E02EEA /* OTEditedSalesInfo.swift */,
+				5E0EBF1E22A2F026007CE474 /* MemberCellData.swift */,
+				5E87069622C7205500EB06CB /* Messages.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -213,8 +324,30 @@
 		5ECB59C9225A1D560057A13E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E9BC4E2224CB244009B71D1 /* AlertController.swift */,
+				5E9BC4E6224D0B59009B71D1 /* PriceListVC.swift */,
+				5E9BC4E8224D0C02009B71D1 /* PriceListCell.swift */,
 				5E9BC4DE224CA374009B71D1 /* LoginVC.swift */,
 				5E9BC4E0224CA39B009B71D1 /* HomeVC.swift */,
+				5E573F5D227B01B800AD9AC3 /* SetLocationVC.swift */,
+				5E44377B2280080900566EB0 /* DailySalesVC.swift */,
+				5E44377D228012EE00566EB0 /* AddItemVC.swift */,
+				5E44378422803EC100566EB0 /* AddItemAlertVC.swift */,
+				5ECB95B52288A96B00380A95 /* CircularVC.swift */,
+				5E591F21228AA199005D8849 /* MainNavigationController.swift */,
+				5E591F23228AB0CF005D8849 /* SalesDetailsVC.swift */,
+				5E591F25228AE90C005D8849 /* SaleDetailsCell.swift */,
+				5E1BC136228D74A200E02EEA /* EditSalesDetailsVC.swift */,
+				5E308A8B229089B6007F907F /* PriceListDetailsVC.swift */,
+				5EC31BCD229169A5002898A1 /* OTOptionsVC.swift */,
+				5E9A68E022955CC300190CF3 /* TestVC.swift */,
+				5E8332402299228E008304D3 /* LiveChatVC.swift */,
+				5E83324222992C0D008304D3 /* MembersVC.swift */,
+				5E83324422992C28008304D3 /* UnseenMessagesVC.swift */,
+				5E0EBF1A22A2791C007CE474 /* MembersListCell.swift */,
+				5E0EBF1C22A2797E007CE474 /* UnseenMsgCell.swift */,
+				5ED1493422B75B6200424BCE /* LiveChatSettings.swift */,
+				5E0BB9ED22C221F300074A98 /* GroupChatVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,10 +470,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0CE05422C33169007CC004 /* CustomeImageMessage.xib in Resources */,
+				5EB46DCD22C8759300F87584 /* CustomMessagesCell.xib in Resources */,
+				5E44378322803E7600566EB0 /* CustomAlert.storyboard in Resources */,
 				5E30E99D2248AAF50069FEBF /* LaunchScreen.storyboard in Resources */,
 				5E9BC4DB224C8593009B71D1 /* GoogleService-Info.plist in Resources */,
+				5E0CE05022C32551007CC004 /* CustomMessages.xib in Resources */,
 				5E30E99A2248AAF50069FEBF /* Assets.xcassets in Resources */,
 				5E30E9952248AAF30069FEBF /* Main.storyboard in Resources */,
+				5ECB95BA2288AADB00380A95 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +555,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TPPDF/TPPDF.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -430,9 +573,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPPDF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -471,20 +619,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E30E9902248AAF30069FEBF /* AppDelegate.swift in Sources */,
+				5E4437812280160C00566EB0 /* AddItemDelegate.swift in Sources */,
 				5E9BC4E3224CB244009B71D1 /* AlertController.swift in Sources */,
+				5E0EBF1F22A2F026007CE474 /* MemberCellData.swift in Sources */,
+				5E1BC13F228DF77700E02EEA /* OTDeletedSalesInfo.swift in Sources */,
 				5E921B6F22785A3A0016D342 /* SalesInfo.swift in Sources */,
 				5E3C6E4622788FB600DE28E8 /* LocationInfo.swift in Sources */,
+				5EC7C55F2281FF3900919E3F /* OTTempSalesInfo.swift in Sources */,
+				5E0EBF1D22A2797E007CE474 /* UnseenMsgCell.swift in Sources */,
 				5E3C6E4422788E8500DE28E8 /* OTSalesInfo.swift in Sources */,
+				5E44378722804A1100566EB0 /* AlertService.swift in Sources */,
+				5E573F5E227B01B800AD9AC3 /* SetLocationVC.swift in Sources */,
+				5ED1493522B75B6200424BCE /* LiveChatSettings.swift in Sources */,
 				5E9BC4E1224CA39B009B71D1 /* HomeVC.swift in Sources */,
 				5E921B6D2278164C0016D342 /* LiveChatUtil.swift in Sources */,
 				5ECB59C8225A1A210057A13E /* ProductInfo.swift in Sources */,
+				5E1BC13B228DE02500E02EEA /* DeletedSalesInfo.swift in Sources */,
+				5E83324322992C0D008304D3 /* MembersVC.swift in Sources */,
+				5EB46DC922C8561C00F87584 /* CustomImageMessage.swift in Sources */,
+				5E0CE05622C33545007CC004 /* CustomMessages.swift in Sources */,
+				5E44378522803EC100566EB0 /* AddItemAlertVC.swift in Sources */,
 				5E9BC4E7224D0B59009B71D1 /* PriceListVC.swift in Sources */,
 				5E30E9982248AAF30069FEBF /* Travel_Retail.xcdatamodeld in Sources */,
+				5E1BC141228DF7CA00E02EEA /* OTEditedSalesInfo.swift in Sources */,
+				5EC31BCE229169A5002898A1 /* OTOptionsVC.swift in Sources */,
+				5E0BB9EE22C221F300074A98 /* GroupChatVC.swift in Sources */,
+				5E44377C2280080900566EB0 /* DailySalesVC.swift in Sources */,
+				5EB46DCC22C8759300F87584 /* CustomMessagesCell.swift in Sources */,
 				5E3C6E4A227893D600DE28E8 /* GuidelineInfo.swift in Sources */,
+				5EC7C55D2281D18300919E3F /* TempSalesInfo.swift in Sources */,
+				5E1BC137228D74A200E02EEA /* EditSalesDetailsVC.swift in Sources */,
+				5E591F22228AA199005D8849 /* MainNavigationController.swift in Sources */,
+				5E9A68E122955CC300190CF3 /* TestVC.swift in Sources */,
 				5E9BC4E9224D0C02009B71D1 /* PriceListCell.swift in Sources */,
+				5ECB95B62288A96B00380A95 /* CircularVC.swift in Sources */,
+				5E591F24228AB0CF005D8849 /* SalesDetailsVC.swift in Sources */,
 				5E9BC4DF224CA374009B71D1 /* LoginVC.swift in Sources */,
+				5E591F26228AE90C005D8849 /* SaleDetailsCell.swift in Sources */,
+				5E83324522992C28008304D3 /* UnseenMessagesVC.swift in Sources */,
+				5E1BC13D228DE36000E02EEA /* EditedSalesInfo.swift in Sources */,
+				5E87069722C7205500EB06CB /* Messages.swift in Sources */,
+				5E44377E228012EE00566EB0 /* AddItemVC.swift in Sources */,
 				5E4F7B6C227342BF005A5D97 /* LocalDB.swift in Sources */,
 				5ECB59C6225A19E80057A13E /* UserInfo.swift in Sources */,
+				5E8332412299228E008304D3 /* LiveChatVC.swift in Sources */,
+				5EF807B7229A7FC800BFC2F8 /* MenuTabsView.swift in Sources */,
+				5E0EBF1B22A2791C007CE474 /* MembersListCell.swift in Sources */,
+				5ECB95B82288AA2400380A95 /* Slide.swift in Sources */,
+				5E308A8C229089B6007F907F /* PriceListDetailsVC.swift in Sources */,
 				5E3C6E482278918200DE28E8 /* CircularInfo.swift in Sources */,
 				5E9BC4E5224CC1FC009B71D1 /* Utils.swift in Sources */,
 			);
@@ -665,6 +847,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MFNW623KDX;
 				INFOPLIST_FILE = "Travel Retail/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -684,6 +867,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MFNW623KDX;
 				INFOPLIST_FILE = "Travel Retail/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

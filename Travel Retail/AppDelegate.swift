@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
-import RealmSwift
+//import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,13 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        do {
+        /*do {
             let realm = try Realm()
             let user = realm.objects(UserInfo.self)
-            print(user)
+            //print(user)
         } catch  {
             print("Error initializing new realm \(error)")
-        }
+        }*/
         
         //print(Realm.Configuration.defaultConfiguration.fileURL)
         

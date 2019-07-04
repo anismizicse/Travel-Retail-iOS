@@ -12,6 +12,12 @@ target 'Travel Retail' do
     pod 'RealmSwift'
     pod 'Toast-Swift', '~> 4.0.0'
     pod 'Firebase/Database'
+    pod 'SearchTextField'
+    pod 'SwiftyJSON', '4.2'
+    pod 'TPPDF'
+    pod 'XLPagerTabStrip', '~> 9.0'
+    pod 'Kingfisher', '~> 5.0'
+    pod 'Firebase/Storage'
 
   target 'Travel RetailTests' do
     inherit! :search_paths
