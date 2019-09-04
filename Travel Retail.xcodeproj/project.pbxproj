@@ -69,6 +69,7 @@
 		5ECB95B82288AA2400380A95 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB95B72288AA2400380A95 /* Slide.swift */; };
 		5ECB95BA2288AADB00380A95 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECB95B92288AADB00380A95 /* Slide.xib */; };
 		5ED1493522B75B6200424BCE /* LiveChatSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1493422B75B6200424BCE /* LiveChatSettings.swift */; };
+		5EF2844822DE337100F5559D /* AudioRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2844722DE337100F5559D /* AudioRecordVC.swift */; };
 		5EF807B7229A7FC800BFC2F8 /* MenuTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF807B6229A7FC800BFC2F8 /* MenuTabsView.swift */; };
 		D432C2B7400DB61A7663C1E8 /* Pods_Travel_Retail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A02667725684C51FB18BA3 /* Pods_Travel_Retail.framework */; };
 		FAA1EE5DB9E913A949DE6115 /* Pods_Travel_RetailTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF5E133B16C0AF4A1A9C2D0 /* Pods_Travel_RetailTests.framework */; };
@@ -107,6 +108,7 @@
 		5E1BC13C228DE36000E02EEA /* EditedSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditedSalesInfo.swift; sourceTree = "<group>"; };
 		5E1BC13E228DF77700E02EEA /* OTDeletedSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTDeletedSalesInfo.swift; sourceTree = "<group>"; };
 		5E1BC140228DF7CA00E02EEA /* OTEditedSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTEditedSalesInfo.swift; sourceTree = "<group>"; };
+		5E2FFDDF22CF5BB80008667D /* Travel Retail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Travel Retail.entitlements"; sourceTree = "<group>"; };
 		5E308A8B229089B6007F907F /* PriceListDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListDetailsVC.swift; sourceTree = "<group>"; };
 		5E30E98C2248AAF30069FEBF /* Travel Retail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Retail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E30E98F2248AAF30069FEBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		5ECB95B72288AA2400380A95 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		5ECB95B92288AADB00380A95 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		5ED1493422B75B6200424BCE /* LiveChatSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChatSettings.swift; sourceTree = "<group>"; };
+		5EF2844722DE337100F5559D /* AudioRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordVC.swift; sourceTree = "<group>"; };
 		5EF807B6229A7FC800BFC2F8 /* MenuTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabsView.swift; sourceTree = "<group>"; };
 		8FD2331C374C8EF56C61B295 /* Pods_Travel_RetailUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel_RetailUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A2BEF564CB09F35C0FC812 /* Pods-Travel RetailUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel RetailUITests.release.xcconfig"; path = "Target Support Files/Pods-Travel RetailUITests/Pods-Travel RetailUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +241,7 @@
 		5E30E98E2248AAF30069FEBF /* Travel Retail */ = {
 			isa = PBXGroup;
 			children = (
+				5E2FFDDF22CF5BB80008667D /* Travel Retail.entitlements */,
 				5EB46DC722C8551E00F87584 /* CustomViews */,
 				5E30E98F2248AAF30069FEBF /* AppDelegate.swift */,
 				5E30E9932248AAF30069FEBF /* Main.storyboard */,
@@ -348,6 +352,7 @@
 				5E0EBF1C22A2797E007CE474 /* UnseenMsgCell.swift */,
 				5ED1493422B75B6200424BCE /* LiveChatSettings.swift */,
 				5E0BB9ED22C221F300074A98 /* GroupChatVC.swift */,
+				5EF2844722DE337100F5559D /* AudioRecordVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -434,6 +439,11 @@
 				TargetAttributes = {
 					5E30E98B2248AAF30069FEBF = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					5E30E9A22248AAF50069FEBF = {
 						CreatedOnToolsVersion = 10.1;
@@ -626,6 +636,7 @@
 				5E921B6F22785A3A0016D342 /* SalesInfo.swift in Sources */,
 				5E3C6E4622788FB600DE28E8 /* LocationInfo.swift in Sources */,
 				5EC7C55F2281FF3900919E3F /* OTTempSalesInfo.swift in Sources */,
+				5EF2844822DE337100F5559D /* AudioRecordVC.swift in Sources */,
 				5E0EBF1D22A2797E007CE474 /* UnseenMsgCell.swift in Sources */,
 				5E3C6E4422788E8500DE28E8 /* OTSalesInfo.swift in Sources */,
 				5E44378722804A1100566EB0 /* AlertService.swift in Sources */,
@@ -844,6 +855,7 @@
 			baseConfigurationReference = B25DA3799CE7882C85E8D517 /* Pods-Travel Retail.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Travel Retail/Travel Retail.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MFNW623KDX;
 				INFOPLIST_FILE = "Travel Retail/Info.plist";
@@ -864,6 +876,7 @@
 			baseConfigurationReference = E0DC53BF77078EC238B156C3 /* Pods-Travel Retail.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Travel Retail/Travel Retail.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MFNW623KDX;
 				INFOPLIST_FILE = "Travel Retail/Info.plist";

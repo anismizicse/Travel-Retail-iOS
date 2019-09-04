@@ -68,8 +68,8 @@ class MembersVC: UIViewController, IndicatorInfoProvider {
         
         membersTable.rowHeight = UITableView.automaticDimension
         
-        retreiveMembers()
-        retreiveGroupMessages()
+        //retreiveMembers()
+        //retreiveGroupMessages()
         
         if !Utils.isConnectedToNetwork(){
             isConnected = false

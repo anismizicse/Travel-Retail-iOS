@@ -1398,34 +1398,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a70-P2-6oE">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a70-P2-6oE" userLabel="chatMessageContainer">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyv-bM-G1t">
-                                        <rect key="frame" x="8" y="1" width="48" height="48"/>
-                                        <state key="normal" image="emoticon_48pt"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyv-bM-G1t">
+                                        <rect key="frame" x="8" y="9" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="Bz0-XW-IXR"/>
+                                            <constraint firstAttribute="width" constant="22" id="rRy-9d-yab"/>
+                                        </constraints>
+                                        <state key="normal" image="insert_emoticon_18pt"/>
                                         <connections>
                                             <action selector="sendImogiMsg:" destination="kOq-ZD-bnf" eventType="touchUpInside" id="AbS-jz-4vy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faW-fC-kY1">
-                                        <rect key="frame" x="319" y="1" width="48" height="48"/>
-                                        <state key="normal" image="attach_file_48pt"/>
+                                        <rect key="frame" x="345" y="9" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="EfE-GI-InD"/>
+                                            <constraint firstAttribute="height" constant="22" id="z7M-n4-RBa"/>
+                                        </constraints>
+                                        <state key="normal" image="attach_file_18pt"/>
                                         <connections>
                                             <action selector="attachFile:" destination="kOq-ZD-bnf" eventType="touchUpInside" id="b6s-0S-pmo"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BMj-o9-Ise">
-                                        <rect key="frame" x="64" y="10" width="247" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Send Message" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BMj-o9-Ise">
+                                        <rect key="frame" x="38" y="9" width="299" height="22"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="v2Z-cu-TAe"/>
+                                            <constraint firstAttribute="height" constant="22" id="zWc-MZ-egd"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="messageEditingChanged:" destination="kOq-ZD-bnf" eventType="editingChanged" id="5qi-7H-hbv"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiS-mv-D7k">
-                                        <rect key="frame" x="319" y="14" width="48" height="22"/>
+                                        <rect key="frame" x="345" y="9" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="G1V-bB-Ydl"/>
+                                            <constraint firstAttribute="width" constant="22" id="xIN-eu-TOW"/>
+                                        </constraints>
                                         <state key="normal" image="send_black_18pt"/>
                                         <connections>
                                             <action selector="sendMessage:" destination="kOq-ZD-bnf" eventType="touchUpInside" id="pEg-PZ-rJF"/>
@@ -1434,21 +1449,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="BMj-o9-Ise" firstAttribute="centerY" secondItem="a70-P2-6oE" secondAttribute="centerY" id="1RG-lo-dmL"/>
-                                    <constraint firstItem="faW-fC-kY1" firstAttribute="leading" secondItem="BMj-o9-Ise" secondAttribute="trailing" constant="8" id="COF-qd-pKx"/>
-                                    <constraint firstItem="Xyv-bM-G1t" firstAttribute="centerY" secondItem="a70-P2-6oE" secondAttribute="centerY" id="Ctj-f7-wE0"/>
-                                    <constraint firstItem="Xyv-bM-G1t" firstAttribute="leading" secondItem="a70-P2-6oE" secondAttribute="leading" constant="8" id="OqM-om-PLT"/>
-                                    <constraint firstItem="yiS-mv-D7k" firstAttribute="centerY" secondItem="a70-P2-6oE" secondAttribute="centerY" id="WWk-E2-3Fy"/>
-                                    <constraint firstItem="yiS-mv-D7k" firstAttribute="leading" secondItem="BMj-o9-Ise" secondAttribute="trailing" constant="8" id="b87-qZ-N4d"/>
-                                    <constraint firstAttribute="trailing" secondItem="faW-fC-kY1" secondAttribute="trailing" constant="8" id="dWC-0B-dOY"/>
-                                    <constraint firstItem="BMj-o9-Ise" firstAttribute="leading" secondItem="Xyv-bM-G1t" secondAttribute="trailing" constant="8" id="fZ8-kA-3kn"/>
-                                    <constraint firstItem="faW-fC-kY1" firstAttribute="centerY" secondItem="a70-P2-6oE" secondAttribute="centerY" id="hwL-e2-jxK"/>
-                                    <constraint firstAttribute="trailing" secondItem="yiS-mv-D7k" secondAttribute="trailing" constant="8" id="jJJ-gb-p88"/>
-                                    <constraint firstAttribute="height" constant="50" id="y5c-dV-VzX"/>
+                                    <constraint firstAttribute="trailing" secondItem="yiS-mv-D7k" secondAttribute="trailing" constant="8" id="GEa-6u-a45"/>
+                                    <constraint firstItem="faW-fC-kY1" firstAttribute="centerY" secondItem="a70-P2-6oE" secondAttribute="centerY" id="GWb-pO-ddl"/>
+                                    <constraint firstItem="faW-fC-kY1" firstAttribute="leading" secondItem="BMj-o9-Ise" secondAttribute="trailing" constant="8" id="JJp-Gi-gOg"/>
+                                    <constraint firstAttribute="trailing" secondItem="faW-fC-kY1" secondAttribute="trailing" constant="8" id="eUO-gV-YoU"/>
+                                    <constraint firstItem="Xyv-bM-G1t" firstAttribute="leading" secondItem="a70-P2-6oE" secondAttribute="leading" constant="8" id="gKH-of-quC"/>
+                                    <constraint firstItem="BMj-o9-Ise" firstAttribute="leading" secondItem="Xyv-bM-G1t" secondAttribute="trailing" constant="8" id="muC-hX-DEk"/>
+                                    <constraint firstItem="Xyv-bM-G1t" firstAttribute="centerY" secondItem="a70-P2-6oE" secondAttribute="centerY" id="ocG-07-Sfv"/>
+                                    <constraint firstItem="yiS-mv-D7k" firstAttribute="centerY" secondItem="a70-P2-6oE" secondAttribute="centerY" id="uAD-Yq-GEz"/>
+                                    <constraint firstItem="BMj-o9-Ise" firstAttribute="centerY" secondItem="a70-P2-6oE" secondAttribute="centerY" id="w7I-Ko-Glq"/>
+                                    <constraint firstAttribute="height" constant="40" id="y5c-dV-VzX"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kzL-LF-1Sv">
-                                <rect key="frame" x="0.0" y="64" width="375" height="545"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="555"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -1707,9 +1721,9 @@
     </scenes>
     <resources>
         <image name="app_logo" width="316" height="316"/>
-        <image name="attach_file_48pt" width="48" height="48"/>
+        <image name="attach_file_18pt" width="18" height="18"/>
         <image name="chat_bubble_black_24pt" width="24" height="24"/>
-        <image name="emoticon_48pt" width="48" height="48"/>
+        <image name="insert_emoticon_18pt" width="18" height="18"/>
         <image name="login_bg" width="800" height="1113"/>
         <image name="online" width="300" height="300"/>
         <image name="send_black_18pt" width="18" height="18"/>

@@ -42,4 +42,12 @@ class AlertService {
         
         return alertVc
     }
+    
+    func audioRecordAlert() -> AudioRecordVC{
+        
+        let storyBoard = UIStoryboard(name: "CustomAlert", bundle: .main)
+        let alertVc = storyBoard.instantiateViewController(withIdentifier: "AudioRecord") as! AudioRecordVC
+        
+        return alertVc
+    }
 }
